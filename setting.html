@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidbase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="user-profile mt-3 position-relative">
+                    <img src="zaid.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                    <span class="ms-2">Zaid Ehsan</span>
+                    <button class="btn btn-link dropdown-toggle position-absolute top-0 end-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end custom-dropdown" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class="btn mt-3 d-block col-12 btn-transparent text-blue-grey">
+                    <i class="fa fa-home"></i> Home
+                </a>
+                <a href="setting.html" class="btn mt-3 d-block col-12 btn-transparent text-blue-grey">
+                    <i class="fa fa-cog"></i> Setting
+                </a>
+                <a href="project.html" class="btn mt-3 d-block col-12 btn-transparent text-blue-grey">
+                    <i class="fa fa-folder"></i> Project
+                </a>
+                <div class="toggle-bar">
+                    <label class="switch">
+                        <input type="checkbox" id="modeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-9 main-content">
+                <div class=" p-4 mb-5">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Projects</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Project List</li>
+                        </ol>
+                    </nav>
+                <h1><i class="fa fa-tasks me-2"></i>Untitled</h1>
+                <div class="border-bottom"></div>
+            </div>
+            <div class="col-md-9 main-content">
+                <div class="p-4 mb-5">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="chatbot-tab" data-bs-toggle="tab" href="#chatbot" role="tab" aria-controls="chatbot" aria-selected="true">ChatBot</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="db-connection-tab" data-bs-toggle="tab" href="#db-connection" role="tab" aria-controls="db-connection" aria-selected="false">Database Connection</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="db-schema-tab" data-bs-toggle="tab" href="#db-schema" role="tab" aria-controls="db-schema" aria-selected="false">Database Schema</a>
+                        </li>
+                    </ul>
+    
+                    <!-- Tab content -->
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="chatbot" role="tabpanel" aria-labelledby="chatbot-tab">
+                            <h3>ChatBot</h3>
+                        </div>
+                        <div class="tab-pane fade" id="db-connection" role="tabpanel" aria-labelledby="db-connection-tab">
+                            <h3>Database Connection</h3>
+                            <p>Create a Database Connection.</p>
+                        </div>
+                        <div class="tab-pane fade" id="db-schema" role="tabpanel" aria-labelledby="db-schema-tab">
+                            <h3>Database Schema</h3>
+                            <p>Create a Database Schema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        const body = document.body;
+        const modeToggle = document.getElementById('modeToggle');
+        modeToggle.addEventListener('change', function() {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>
