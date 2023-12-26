@@ -14,13 +14,16 @@
         <div class="row">
             <div class="col-md-3 sidebar">
                 <div class="user-profile mt-3 position-relative">
-                    <img src="zaid.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
-                    <span class="ms-2">Zaid Ehsan</span>
+                    <img src="boy.png" alt="Profile Picture" class="img-fluid rounded-circle">
+                    <div class="ms-2">
+                    <span >Zaid Ehsan</span>
+                    <span >zaid@gmail.com</span>
+                </div>
                     <button class="btn btn-link dropdown-toggle position-absolute top-0 end-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end custom-dropdown" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#profileModal">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
@@ -53,7 +56,41 @@
                     <li><h5>Set up an Email Inbox</h5></li>
                 </ul>
             </div>
+        </div>
     </div>
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Update Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <img src="boy.png" alt="Profile Image" class="img-fluid rounded-circle" style="max-width: 50%;">
+                    </div>
+                    <div class="col-md-8">
+                        <form>
+                            <label for="profileName">Name</label>
+                            <input type="text" id="profileName" class="form-control">
+                            
+                            <label for="profilePassword">Password</label>
+                            <input type="password" id="profilePassword" class="form-control">
+                        
+                            <label for="profileEmail">Email</label>
+                            <input type="text" id="profileEmail" class="form-control" readonly value="current_email@example.com">
+                            <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <script>
         const body = document.body;
         const modeToggle = document.getElementById('modeToggle');

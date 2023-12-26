@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-3 sidebar">
                 <div class="user-profile mt-3 position-relative">
-                    <img src="zaid.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                    <img src="boy.png" alt="Profile Picture" class="img-fluid rounded-circle">
                     <span class="ms-2">Zaid Ehsan</span>
                     <button class="btn btn-link dropdown-toggle position-absolute top-0 end-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     </button>
@@ -74,12 +74,62 @@
                             <h3>ChatBot</h3>
                         </div>
                         <div class="tab-pane fade" id="db-connection" role="tabpanel" aria-labelledby="db-connection-tab">
-                            <h3>Database Connection</h3>
-                            <p>Create a Database Connection.</p>
+                            <h3>Database Server</h3>
+                            <div class="card">
+                                <div class="server-card">
+                                  <div class="server-images">
+                                    <input type="image" src="mysql.png" id="mysqlImage">
+                                  </div>
+                                  <label class="switch">
+                                    <input type="checkbox" class="image-toggle" id="mysqlToggle">
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="card">
+                                <div class="server-card">
+                                  <div class="server-images">
+                                    <input type="image" src="postgresql.png" id="postgresqlImage">
+                                  </div>
+                                  <label class="switch">
+                                    <input type="checkbox" class="image-toggle" id="postgresqlToggle">
+                                    <span class="slider round"></span>
+                                  </label>
+                                </div>
+                              </div><br><br>
+                              <div class="border-bottom"></div><br>
+                            <div class="database-connection">
+                                <form>
+                                    <div class="mb-3">
+                                      <label for="hostInput" class="form-label">Host</label>
+                                      <input type="email" class="form-control" id="hostInput" aria-describedby="emailHelp" placeholder="Enter host">
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="portInput" class="form-label">Port</label>
+                                      <input type="password" class="form-control" id="portInput" placeholder="Enter port">
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="usernameInput" class="form-label">Username</label>
+                                      <input type="password" class="form-control" id="usernameInput" placeholder="Enter username">
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="passwordInput" class="form-label">Password</label>
+                                      <input type="password" class="form-control" id="passwordInput" placeholder="Enter password">
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="dbNameInput" class="form-label">Database Name</label>
+                                      <input type="password" class="form-control" id="dbNameInput" placeholder="Enter database name">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                                  
+                            </div>
                         </div>
+                        
                         <div class="tab-pane fade" id="db-schema" role="tabpanel" aria-labelledby="db-schema-tab">
-                            <h3>Database Schema</h3>
-                            <p>Create a Database Schema.</p>
+                            <input type="file" id="fileInput">
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
